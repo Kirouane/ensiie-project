@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "User\\": "src/User/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "User\\": "test/unit/User/"
+        }
+    }
+}
