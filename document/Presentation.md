@@ -14,9 +14,9 @@ Les sujets
 
 Nous proposons trois sujets qui seront détaillés ultérieurement et présentés lors de la première séance :
 
-* Agenda des associations
-* Accueil des nouveaux arrivants
-* Le twitter de l’ENSIIE
+* [Agenda des associations](https://github.com/Un3x/ensiie-project/tree/master/document/sujets/agenda-des-associations.md)
+* [Accueil des nouveaux arrivants](https://github.com/Un3x/ensiie-project/tree/master/document/sujets/accueil-des-nouveaux-arrivants.md)
+* [Le twitter de l’ENSIIE](https://github.com/Un3x/ensiie-project/tree/master/document/sujets/twittiie-le-twitter-de-ensiie.md)
 
 PROJET LIBRE
 -----
@@ -51,7 +51,7 @@ Nous attendons de la part des élèves une véritable appropriation du sujet. Il
 > * PostgreSQL
 > * JavaScript
 
-#### On aimera
+#### On aimera
 
 > * Toutes les bonnes pratiques citées sur http://www.phptherightway.com/
 > * PHP 7.1+
@@ -90,7 +90,7 @@ Afin de s’affranchir de problème d’infrastructure, nous vous mettons à dis
 
 ### Le rendu des sources et du rapport
 
->Les projets devront être pushé sur ce [repository git](https://github.com/Kirouane/ensiie-project) sur une branche ```<nom-de-votre-groupe>-group```.
+>Les projets devront être pushé sur ce [repository git](https://github.com/Un3x/ensiie-project) sur une branche ```<nom-de-votre-groupe>-group```.
 
 **ATTENTION**: ce repo git n'as pas pour but d'être utilisé pendant le développement. Il s'agit de notre outil pour récupérer vos projets et pouvoir les utiliser. L'utilisation d'un git au cours du développement n'est pas obligatoire, mais nous vous encourageons à en utiliser un (github, arise, ensiie, bitbucket, gitlab etc)/
 
