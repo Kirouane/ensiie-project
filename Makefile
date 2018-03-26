@@ -1,6 +1,10 @@
 bold=$(shell (tput bold))
 normal=$(shell (tput sgr0))
 .DEFAULT_GOAL=help
+DISTRIB:=$(shell lsb_release -is | tr '[:upper:]' '[:lower:]')
+VERSION:=$(shell lsb_release -cs)
+ARCHITECTURE:=$(shell dpkg --print-architecture)
+
 help:
 	@echo "${bold}install${normal}\n\t Installs the whole appplication. To use at the first installation.\n"
 	@echo "${bold}uninstall${normal}\n\t Stops and removes containers and drops the database.\n"
@@ -17,6 +21,21 @@ stop:
 	docker-compose rm -v
 
 install: uninstall start composer.install db.install
+
+depedencies: /usr/bin/docker /usr/local/bin/docker-compose
+
+/usr/bin/docker:
+	sudo apt-get update
+	sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+	curl -fsSL https://download.docker.com/linux/${DISTRIB}/gpg | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=${ARCHITECTURE}] https://download.docker.com/linux/${DISTRIB} ${VERSION} stable"
+	sudo apt-get update
+	sudo apt-get install docker-ce
+
+/usr/local/bin/docker-compose:
+	sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+	sudo chmod +x /usr/local/bin/docker-compose
+	docker-compose version
 
 uninstall: stop
 	@sudo rm -rf postgres-data
